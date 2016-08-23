@@ -1,11 +1,3 @@
-body.dead{
-  background-color: red;
-}
-
-.success{
-  color: green;
-}
-
 .roulette-board{
   width: 1000px;
   position: relative;
@@ -29,11 +21,6 @@ button.start-game:focus {
     outline: none;
 }
 
-.chamber.blank{
-  background-color: black;
-  opacity: 0.5;
-}
-
 .roulette-board > img,
 button.start-game{
   position: absolute;
@@ -48,18 +35,7 @@ button.start-game{
   transition: 500ms top, 500ms left;
 }
 
-button.start-game,
-.centered.mon,
-.centered.kvi,
-.centered.don,
-.centered.dvd,
-.centered.sap,
-.centered.ros{
-  top: 220px;
-  left: 220px;
-}
-
-
+/* Position of prof icons */
 .mon, .dvd{
   left: 220px;
 }
@@ -80,4 +56,15 @@ button.start-game,
 }
 .dvd{
   top: 440px;
+}
+
+button.start-game,
+.centered.mon,
+.centered.kvi,
+.centered.don,
+.centered.dvd,
+.centered.sap,
+.centered.ros{
+  top: 220px;
+  left: 220px;
 }

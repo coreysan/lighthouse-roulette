@@ -14,59 +14,31 @@
 
 - Handle win state
 
-- 
+- Touch-ups
 
 */
 $(function(){
 
-  var score = 0;
-  const BLANKS_IN_CHAMBER = 5;
-  const FADE_OUT_TIME = 1000;
 
   var init = function(){
 
     // uncenter chambers
-    $('.chamber').removeClass('centered');
 
     // remove start-game button
-    $('button.start-game').fadeOut(FADE_OUT_TIME);
 
     // assign bullet to a random chamber
-    $('.chamber').eq(getRandomChamber()).addClass('bullet');
+
   }
 
-  $('button.start-game').on('click', init);
 
-  $('.chamber').on('click', function(){
+  // chamber click handler
+
     // check if this is the bullet. 
-    if($(this).hasClass('bullet')){
-      // if so, start death screen
-      $('body').addClass('dead');
-      $('.chamber').attr('src', 'images/bullet.png');
-      $('.blank').removeClass('blank');
 
-    }else{//fewf, hit a blank!
-      $(this).addClass('blank');
-      $(this).attr('src', 'images/blank.png');
-      $('<div>').addClass('col-xs-2').appendTo('.progress');
-    }
+    // or else it's a blank
 
-    if($('.blank').length === BLANKS_IN_CHAMBER)
-    {
-      $('.bullet').attr('src', 'images/bullet.png');
-      $('.bullet').fadeOut(3000);
-      $('.blank').addClass('centered');
-      $('<span>')
-        .addClass('success')
-        .text(' You Win!!')
-        .appendTo('h1');
-    }
-    // debugger;
-
-    // if not, celebrate somehow
-
-    // WIN if 5/5 blanks have been found. 
-  });
+    //check if game is won (5/5 blanks found)
+    
 
 
   // get random integer between min and max, inclusive

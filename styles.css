@@ -1,0 +1,78 @@
+body.dead{
+  background-color: red;
+}
+
+.success{
+  color: green;
+}
+
+.roulette-board{
+  width: 1000px;
+  position: relative;
+}
+
+.progress > div{
+  height: 30px;
+  background-color: #77ff77;
+  border-right: 1px solid white;
+}
+
+.progress > div.progress__default_bar{
+  background-color: #999;
+}
+
+button.start-game{
+  background-color: #ff9999;
+  font-size: 40px;
+}
+button.start-game:focus {
+    outline: none;
+}
+
+.roulette-board > img,
+button.start-game{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.roulette-board > img{
+  transition: 500ms top, 500ms left;
+}
+
+button.start-game,
+.centered.mon,
+.centered.kvi,
+.centered.don,
+.centered.dvd,
+.centered.sap,
+.centered.ros{
+  top: 220px;
+  left: 220px;
+}
+
+
+.mon, .dvd{
+  left: 220px;
+}
+.kvi, .don{
+  left: 410.41px;
+}
+.sap, .ros{
+  left: 36px;
+}
+.mon{
+  top: 0px;
+}
+.kvi, .ros{
+  top: 110px;
+}
+.don, .sap{
+  top: 330px;
+}
+.dvd{
+  top: 440px;
+}

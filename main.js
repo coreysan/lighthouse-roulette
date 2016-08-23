@@ -20,7 +20,7 @@
 $(function(){
 
   var score = 0;
-  const BLANKS_IN_CHAMBER = 3;
+  const BLANKS_IN_CHAMBER = 5;
   const FADE_OUT_TIME = 1000;
 
   var init = function(){
@@ -33,18 +33,18 @@ $(function(){
 
     // assign bullet to a random chamber
     $('.chamber').eq(getRandomChamber()).addClass('bullet');
-
   }
 
   $('button.start-game').on('click', init);
 
   $('.chamber').on('click', function(){
-
     // check if this is the bullet. 
     if($(this).hasClass('bullet')){
       // if so, start death screen
       $('body').addClass('dead');
       $('.chamber').attr('src', 'images/bullet.png');
+      $('.blank').removeClass('blank');
+
     }else{//fewf, hit a blank!
       $(this).addClass('blank');
       $(this).attr('src', 'images/blank.png');
@@ -54,7 +54,7 @@ $(function(){
     if($('.blank').length === BLANKS_IN_CHAMBER)
     {
       $('.bullet').attr('src', 'images/bullet.png');
-      $('.bullet').fadeOut(4000);
+      $('.bullet').fadeOut(3000);
       $('.blank').addClass('centered');
       $('<span>')
         .addClass('success')
@@ -66,7 +66,6 @@ $(function(){
     // if not, celebrate somehow
 
     // WIN if 5/5 blanks have been found. 
-
   });
 
 

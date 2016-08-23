@@ -29,6 +29,11 @@ button.start-game:focus {
     outline: none;
 }
 
+.chamber.blank{
+  background-color: black;
+  opacity: 0.5;
+}
+
 .roulette-board > img,
 button.start-game{
   position: absolute;
